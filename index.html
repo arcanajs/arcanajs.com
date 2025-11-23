@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ArcanaJS - The modern framework for the web. Simple, powerful, and designed for the future."
+    />
+    <meta
+      name="keywords"
+      content="ArcanaJS, Web Framework, JavaScript, Router-Kit, Mohammed Ben Cheikh, Web Development"
+    />
+    <meta name="author" content="Mohammed Ben Cheikh" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arcanajs.com/" />
+    <meta
+      property="og:title"
+      content="ArcanaJS - The Modern Framework for the Web"
+    />
+    <meta
+      property="og:description"
+      content="Coming soon. A premium web framework built for simplicity and power."
+    />
+    <meta property="og:image" content="arcanajs.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://arcanajs.com/" />
+    <meta
+      property="twitter:title"
+      content="ArcanaJS - The Modern Framework for the Web"
+    />
+    <meta
+      property="twitter:description"
+      content="Coming soon. A premium web framework built for simplicity and power."
+    />
+    <meta property="twitter:image" content="arcanajs.png" />
+
+    <link rel="icon" href="arcanajs.png" type="image/png" />
+    <title>ArcanaJS - The Modern Framework for the Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+                950: "#082f49",
+              },
+              arcana: {
+                dark: "#0f172a",
+                light: "#1e293b",
+                accent: "#8b5cf6", // Violet accent
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            animation: {
+              blob: "blob 7s infinite",
+              "fade-in": "fadeIn 1s ease-out forwards",
+              "slide-up": "slideUp 0.8s ease-out forwards",
+            },
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0f172a;
+        color: white;
+        overflow-x: hidden;
+      }
+      .glass-card {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gradient-text {
+        background: #f84002;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col items-center justify-center relative selection:bg-primary-500 selection:text-white"
+  >
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+      <div
+        class="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"
+      ></div>
+      <div
+        class="absolute top-0 right-1/4 w-96 h-96 bg-arcana-accent/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"
+      ></div>
+      <div
+        class="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"
+      ></div>
+    </div>
+
+    <main
+      class="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center text-center"
+    >
+      <!-- Logo & Branding -->
+      <div class="mb-12 animate-fade-in">
+        <div class="relative w-40 h-40 mx-auto mb-8 group">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary-500 to-arcana-accent rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"
+          ></div>
+          <img
+            src="arcanajs.png"
+            alt="ArcanaJS Logo"
+            class="relative w-full h-full object-contain drop-shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
+            >Arcana</span
+          ><span class="gradient-text">JS</span>
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed animate-slide-up"
+          style="animation-delay: 0.2s"
+        >
+          The modern framework for the web
+        </p>
+
+        <div
+          class="mt-8 inline-block px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-400 text-sm font-medium animate-slide-up"
+          style="animation-delay: 0.4s"
+        >
+          Coming Soon
+        </div>
+      </div>
+
+      <!-- Creator Bio Section -->
+      <div
+        class="w-full max-w-3xl animate-slide-up"
+        style="animation-delay: 0.6s"
+      >
+        <div
+          class="glass-card rounded-2xl p-8 md:p-10 shadow-2xl hover:shadow-primary-500/10 transition-shadow duration-300"
+        >
+          <!-- User provided content starts here -->
+          <div
+            class="flex flex-col md:flex-row items-center gap-6 sm:gap-8"
+            data--h-bstatus="0OBSERVED"
+          >
+            <div
+              class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-primary-500/20"
+              data--h-bstatus="0OBSERVED"
+            >
+              <img
+                alt="Mohammed Ben Cheikh - Creator and Maintainer of Router-Kit"
+                width="128"
+                height="128"
+                loading="lazy"
+                class="w-full h-full object-cover"
+                src="https://avatars.githubusercontent.com/u/176349318?v=4"
+                data--h-bstatus="5PROCESSED"
+                data--h-bresult="clear"
+              />
+            </div>
+            <div
+              class="flex-1 text-center md:text-left"
+              data--h-bstatus="0OBSERVED"
+            >
+              <h3
+                class="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 text-white"
+                data--h-bstatus="0OBSERVED"
+              >
+                Mohammed Ben Cheikh
+              </h3>
+              <p
+                class="text-base sm:text-lg mb-3 sm:mb-4 text-primary-400 font-medium"
+                data--h-bstatus="0OBSERVED"
+              >
+                Creator &amp; Maintainer of
+                <a
+                  href="https://arcanajs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary-300 hover:text-primary-200 transition-colors duration-200"
+                  >ArcanaJS</a
+                >
+                &amp;
+                <a
+                  href="https://routerkit.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary-300 hover:text-primary-200 transition-colors duration-200"
+                  >Router-Kit</a
+                >
+              </p>
+              <p
+                class="text-sm sm:text-base mb-4 sm:mb-6 text-gray-400 leading-relaxed"
+                data--h-bstatus="0OBSERVED"
+              >
+                Passionate about building tools that make developers' lives
+                easier. Creating simple, powerful solutions for complex
+                problems.
+              </p>
+              <div
+                class="flex flex-wrap gap-4 justify-center md:justify-start"
+                data--h-bstatus="0OBSERVED"
+              >
+                <a
+                  href="https://mohammedbencheikh.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-500 transition-all duration-300 shadow-lg shadow-primary-600/20 hover:shadow-primary-600/40 transform hover:-translate-y-0.5"
+                  data--h-bstatus="0OBSERVED"
+                  >Visit Website</a
+                >
+                <a
+                  href="https://github.com/Mohammed-Ben-Cheikh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-6 py-3 bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg font-semibold text-white hover:bg-white/10 transition-all duration-300 hover:border-white/20"
+                  data--h-bstatus="0OBSERVED"
+                  >GitHub Profile</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- User provided content ends here -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="absolute bottom-6 w-full text-center text-gray-500 text-sm">
+      &copy; 2025 ArcanaJS. All rights reserved.
+    </footer>
+  </body>
+</html>
