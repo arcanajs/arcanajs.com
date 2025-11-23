@@ -179,10 +179,7 @@
       }
 
       .nav-blur {
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        background: transparent;
       }
 
       .feature-card {
@@ -264,12 +261,12 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-blur animate-slide-down">
       <div
-        class="container mx-auto px-6 py-6 flex items-center justify-between"
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
       >
         <div class="flex items-center gap-3 group cursor-pointer">
-          <div class="relative w-12 h-12">
+          <div class="relative w-16 h-16">
             <div
-              class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-full blur-lg opacity-60 group-hover:opacity-100 transition-opacity"
+              class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-full blur-lg opacity-40 group-hover:opacity-100 transition-opacity"
             ></div>
             <img
               src="arcanajs.png"
@@ -278,9 +275,8 @@
             />
           </div>
           <span
-            class="text-3xl font-bold tracking-tight text-white group-hover:text-orange-400 transition-colors"
-            >ArcanaJS</span
-          >
+            class="text-2xl font-bold tracking-tight text-white group-hover:text-orange-400 transition-colors"
+          ></span>
         </div>
         <div class="hidden md:flex items-center gap-8 text-sm font-medium">
           <a
